@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Better Billbee",
+  "version": "0.1.9",
+  "description": "Optimize Billbee",
+  "background":
+    {
+        "scripts": ["js/jquery.min.js", "content.js"]
+    },
+
+  "content_scripts": [{
+      "run_at":"document_end",
+      "css": ["styles.css"],
+      "js": ["js/jquery.min.js","content.js"],
+      "matches": ["https://app.billbee.io/de/order"]
+    }
+  ]
+}
+
+
+
