@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>BetterBillbee: Einstellungen</title></head>
+<body style="background-color:#e4e4e4;font-size:120%;">
+    <div style="width:600px;margin: auto;background-color:white;padding:30px;border-radius: 10px;text-align: center">
+            <img src="icon64.png" width="64" height="64" style="margin:auto;text-align: center" /><br />
+<h2>
+    BetterBillbee
+</h2><h1>
+    Einstellungen
+</h1><!--
+Bestellungen mit Kundennachrichten:
+<select id="color">
+ <option value="red">fett darstellen</option>
+ <option value="green">nicht hervorheben</option>
+</select>-->
+<br><br><div style="text-align: left;margin:30px;">
+<label>
+        <input type="checkbox" id="customerNoticeBold">
+        Bestellungen mit Kundennachrichten fett darstellen
+      </label><br>
+      <label>
+<input type="checkbox" id="shipOndblClick">
+Bestellungen mit einem Doppelklick versenden
+</label>
+<br />
+<label>
+    <input type="checkbox" id="showBtnShip">
+    Versenden-Button in die Button-Leiste verlegen
+    </label>
+    <br />
+    </div>
+<button id="save" style="background-color: #03BF68; padding:5px 20px; border:1px solid white; border-radius: 5px;color:white;margin:20px;font-size: 20px">Speichern</button>
+</div><br><br><center><div id="status"></div></center>
+<script src="options.js"></script>
+</body>
+</html>

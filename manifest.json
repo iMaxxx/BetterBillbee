@@ -1,13 +1,17 @@
 {
   "manifest_version": 2,
 
-  "name": "Better Billbee",
-  "version": "0.1.9",
-  "description": "Optimize Billbee",
+  "name": "BetterBillbee",
+  "version": "0.1.16",
+  "description": "Optimierungen für Billbee",
+  "options_page": "options.html",
+  "permissions": ["storage"],
+  "icons": { "64": "icon64.png","128": "icon128.png" },
   "background":
     {
         "scripts": ["js/jquery.min.js", "content.js"]
     },
+  "content_security_policy": "script-src 'self' https://app.billbee.io; object-src 'self'",
 
   "content_scripts": [{
       "run_at":"document_end",
