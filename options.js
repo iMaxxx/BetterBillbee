@@ -30,10 +30,9 @@ function save_options() {
     }, function(items) {
         document.getElementById('customerNoticeBold').checked = items.customerNoticeBold;
         document.getElementById('shipOndblClick').checked = items.shipOndblClick;
-        document.getElementById('showBtnShip').checked = items.showBtnShip;
+        document.getElementById('showBtnShip').checked = items.shipOndblClick;
         
     });
   }
   document.addEventListener('DOMContentLoaded', restore_options);
-  document.getElementById('save').addEventListener('click',
-      save_options);
+  document.getElementById('save').addEventListener('click',save_options);

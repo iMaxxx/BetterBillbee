@@ -2,6 +2,7 @@
 var gridChecker;
 var settings = false;
 
+// Einstellungen laden
 chrome.storage.sync.get({
   customerNoticeBold: false,
   shipOndblClick: false,
@@ -15,6 +16,7 @@ function gridLoaded() {
   if(settings.shipOndblClick) {
     $('#gridBody>tr').on('dblclick',function(){
       $('#chkSelected' + $(this).attr('data-id')).click(); 
+      localStorage.setItem('betterBillbee.shippingRow',$('<div>').append($(this).clone()).html());
       $('#btnShipOrders').click();
     });
   }
@@ -38,8 +40,13 @@ $( document ).ready(function() {
   // Prüfen, ob das Grid geladen wurde. ToDo: Richtiges Event finden
   gridChecker = setInterval(() => {
     if($('#gridBody>tr')) {
-      gridLoaded();
       clearInterval(gridChecker);
+      gridLoaded();
+
+      //Kunden-Code ausführen (customer.js)
+      runCustomOnOrders();
+
+      
     }
   }, 1000);
 

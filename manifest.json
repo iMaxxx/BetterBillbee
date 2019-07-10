@@ -2,22 +2,27 @@
   "manifest_version": 2,
 
   "name": "BetterBillbee",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "Optimierungen für Billbee",
   "options_page": "options.html",
   "permissions": ["storage"],
   "icons": { "64": "icon64.png","128": "icon128.png" },
   "background":
     {
-        "scripts": ["js/jquery.min.js", "content.js"]
+        "scripts": ["js/jquery.min.js", "content.js", "customer.js","shipping.js"]
     },
   "content_security_policy": "script-src 'self' https://app.billbee.io; object-src 'self'",
 
   "content_scripts": [{
       "run_at":"document_end",
-      "css": ["styles.css"],
-      "js": ["js/jquery.min.js","content.js"],
+      "css": ["styles.css","customer.css"],
+      "js": ["js/jquery.min.js","content.js","customer.js"],
       "matches": ["https://app.billbee.io/de/order"]
+    },{
+      "run_at":"document_end",
+      "css": ["styles.css","customer.css"],
+      "js": ["js/jquery.min.js","shipping.js","customer.js"],
+      "matches": ["https://app.billbee.io/app_v2/shipping/bulk"]
     }
   ]
 }
