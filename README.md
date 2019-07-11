@@ -5,5 +5,5 @@
 
 ## Wie wird die Erweiterung installiert? 
 Das Plugin ist im Chrome Web Store erhältlich
-[https://chrome.google.com/webstore/detail/betterbillbee/ofcoeemlibjacjagkhlokdkgognkhaom](Chrome Web Store - BetterBillbee)
+[Chrome Web Store - BetterBillbee](https://chrome.google.com/webstore/detail/betterbillbee/ofcoeemlibjacjagkhlokdkgognkhaom)
 
